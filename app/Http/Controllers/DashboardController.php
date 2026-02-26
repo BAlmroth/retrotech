@@ -15,7 +15,7 @@ class DashboardController extends Controller
     public function index()
     {
         $brands = Brand::all();
-        $user = Auth::user(); // hämta inloggad användare
+        $user = Auth::user();
 
         return view('dashboard', compact('brands', 'user'));
     }
