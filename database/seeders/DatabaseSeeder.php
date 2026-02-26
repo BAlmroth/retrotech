@@ -5,6 +5,7 @@ namespace Database\Seeders;
 use App\Models\User;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\Hash;
 
 class DatabaseSeeder extends Seeder
 {
@@ -19,5 +20,11 @@ class DatabaseSeeder extends Seeder
         $this->call(BrandsTableSeeder::class);
         $this->call(ConditionsTableSeeder::class);
         $this->call(ProductsTableSeeder::class);
+
+        User::factory()->create([
+            'name' => 'Admin',
+            'email' => 'admin@retrotech.se',
+            'password' => Hash::make('123'),
+        ]);
     }
 }
