@@ -16,15 +16,15 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        // User::factory(10)->create();
-        $this->call(BrandsTableSeeder::class);
-        $this->call(ConditionsTableSeeder::class);
-        $this->call(ProductsTableSeeder::class);
-
-        User::factory()->create([
+        User::create([
             'name' => 'Admin',
             'email' => 'admin@retrotech.se',
             'password' => Hash::make('123'),
         ]);
+       
+        $this->call(BrandsTableSeeder::class);
+        $this->call(ConditionsTableSeeder::class);
+        $this->call(ProductsTableSeeder::class);
+
     }
 }
