@@ -45,27 +45,23 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
-        $request->validate([
+        $validated = $request->validate([
             'name' => 'required|string|max:255',
             'brand_id' => 'required|exists:brands,id',
             'condition_id' => 'required|exists:conditions,id',
             'price' => 'required|numeric|min:0',
             'in_stock' => 'required|boolean',
-            'description' => 'string',
+            'description' => 'nullable|string',
         ]);
 
-
-        $product = new Product();
-        $product->name = $request->input('name');
-        $product->brand_id = $request->input('brand_id');
-        $product->condition_id = $request->input('condition_id');
-        $product->price = $request->input('price');
-        $product->in_stock = $request->input('in_stock');
-        $product->description = $request->input('description');
-
-        $product->save();
-
-        return redirect('/products')->with('success', 'Product created');
+        try {
+            Product::create($validated);
+            return redirect('/products')->with('success', 'Product created');
+        } catch (\Exception $e) {
+            return redirect()->back()
+                ->withInput()
+                ->with('error', 'Something went wrong, could not save the product.');
+        }
     }
 
     /**
@@ -92,7 +88,7 @@ class ProductController extends Controller
      */
     public function update(Request $request, Product $product)
     {
-        $request->validate([
+        $validated = $request->validate([
             'name' => 'required|string|max:255',
             'brand_id' => 'required|exists:brands,id',
             'condition_id' => 'required|exists:conditions,id',
@@ -101,10 +97,15 @@ class ProductController extends Controller
             'description' => 'nullable|string',
         ]);
 
-        $product->update($request->all());
-
-        return redirect()->route('products.index')
-            ->with('success', 'Produkt uppdaterad!');
+        try {
+            $product->update($validated);
+            return redirect()->route('products.index')
+                ->with('success', 'Produkt uppdaterad!');
+        } catch (\Exception $e) {
+            return redirect()->back()
+                ->withInput()
+                ->with('error', 'Något gick fel vid uppdateringen.');
+        }
     }
 
     /**
@@ -112,10 +113,14 @@ class ProductController extends Controller
      */
     public function destroy(Product $product)
     {
-        $product->delete();
-
-        return redirect()->route('products.index')
-            ->with('success', 'Produkt borttagen!');
+        try {
+            $product->delete();
+            return redirect()->route('products.index')
+                ->with('success', 'Product is deleted!');
+        } catch (\Exception $e) {
+            return redirect()->back()
+                ->with('error', 'Something went wrong, could not delete product.');
+        }
     }
 
     public function confirmDelete(Product $product)

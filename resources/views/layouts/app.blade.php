@@ -26,6 +26,8 @@
     </form>
     </nav>
 
+    @include('partials.alerts')
+
     @yield('content')
 
     @endauth
