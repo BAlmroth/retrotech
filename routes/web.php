@@ -20,6 +20,6 @@ Route::middleware('auth')->group(function () {
 });
 
 //brands
-Route::get('/brands/{brand}', [ProductController::class, 'byBrand'])
+Route::get('/brands/{brand}', [ProductController::class, 'brand'])
     ->name('products.byBrand')
     ->middleware('auth');
