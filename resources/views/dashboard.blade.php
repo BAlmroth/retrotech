@@ -1,5 +1,10 @@
 @include('errors')
 
+@extends('layouts.app')
+
+@section('content')
+
+
 <p>Hello, {{ $user->name }}!</p>
 
 <h2>Options</h2>
@@ -17,3 +22,5 @@
 
 
 <a href="/logout"> logout </a>
+
+@endsection
