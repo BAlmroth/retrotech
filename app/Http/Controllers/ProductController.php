@@ -45,18 +45,29 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
+    {
         $request->validate([
             'name' => 'required|string|max:255',
             'brand_id' => 'required|exists:brands,id',
             'condition_id' => 'required|exists:conditions,id',
             'price' => 'required|numeric|min:0',
             'in_stock' => 'required|boolean',
-            'description' => 'nullable|string',
+            'description' => 'string',
         ]);
 
-        Product::create($request->all());
 
-        return redirect()->route('products.index')->with('success', 'Produkt skapad!');
+        $product = new Product();
+        $product->name = $request->input('name');
+        $product->brand_id = $request->input('brand_id');
+        $product->condition_id = $request->input('condition_id');
+        $product->price = $request->input('price');
+        $product->in_stock = $request->input('in_stock');
+        $product->description = $request->input('description');
+
+        $product->save();
+
+        return redirect('/products')->with('success', 'Product created');
+    }
     }
 
     /**
