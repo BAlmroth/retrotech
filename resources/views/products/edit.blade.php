@@ -57,8 +57,6 @@
     <button type="submit">Update</button>
 </form>
 
-<hr>
-
 {{-- delete --}}
 <form action="{{ route('products.destroy', $product->id) }}" method="POST">
     @csrf
