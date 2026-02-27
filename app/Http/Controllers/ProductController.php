@@ -45,7 +45,6 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
-    {
         $request->validate([
             'name' => 'required|string|max:255',
             'brand_id' => 'required|exists:brands,id',
@@ -67,7 +66,6 @@ class ProductController extends Controller
         $product->save();
 
         return redirect('/products')->with('success', 'Product created');
-    }
     }
 
     /**
