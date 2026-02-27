@@ -7,8 +7,8 @@
 
     @auth
     <nav>
+        <a href="{{ route('dashboard')}}">Dashboard</a>
         <a href="{{ route('products.index') }}">Products</a>
-        
     <form action="" method="GET">
         <select onchange="if(this.value) { window.location.href=this.value }">
             <option value="">Brands</option>
