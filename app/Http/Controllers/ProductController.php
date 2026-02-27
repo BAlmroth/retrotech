@@ -20,11 +20,12 @@ class ProductController extends Controller
     }
 
     // Show products per brand
-    public function brand($brandId)
+    public function brand(Brand $brand)
     {
-        $products = Product::with(['brand', 'condition'])->where('brand_id', $brandId)->orderBy('created_at', 'desc')->paginate(10);
-
-        $brand = Brand::findOrFail($brandId);
+        $products = $brand->products()
+            ->with('condition')
+            ->orderBy('created_at', 'desc')
+            ->paginate(10);
 
         return view('products.index', compact('products', 'brand'));
     }
