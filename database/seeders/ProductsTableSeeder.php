@@ -5,6 +5,7 @@ use Illuminate\Database\Seeder;
 use App\Models\Product;
 use App\Models\Brand;
 use App\Models\Condition;
+use Illuminate\Console\View\Components\Task;
 
 class ProductsTableSeeder extends Seeder
 {
@@ -25,18 +26,21 @@ class ProductsTableSeeder extends Seeder
 
         Product::create([
             'name' => 'Nintendo Switch',
-            'description' => 'Bra skick',
+            'description' => 'Used - Good',
             'brand_id' => $nintendo->id,
             'condition_id' => $good->id,
-            'in_stock' => true
+            'in_stock' => true,
+            'price' => '400'
         ]);
 
         Product::create([
             'name' => 'PlayStation 4',
-            'description' => 'Lite slitage',
+            'description' => 'Used - Good',
             'brand_id' => $sony->id,
             'condition_id' => $likeNew->id,
             'in_stock' => true
         ]);
+
+        Product::factory(10)->create();
     }
 }

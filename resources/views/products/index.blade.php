@@ -5,6 +5,7 @@
     <p>Brand: {{ $product->brand->name }}</p>   
     <p>Condition: {{ $product->condition->name }}</p>
     <p>Price: {{ $product->price }} kr</p>
-@endforeach
+    <a href="{{ route('products.edit', $product->id) }}">Edit</a>
+    @endforeach
 
 {{ $products->links() }}
