@@ -119,4 +119,9 @@ class ProductController extends Controller
         return redirect()->route('products.index')
             ->with('success', 'Produkt borttagen!');
     }
+
+    public function confirmDelete(Product $product)
+    {
+        return view('products.confirm-delete', compact('product'));
+    }
 }

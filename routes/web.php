@@ -25,3 +25,7 @@ Route::middleware('auth')->group(function () {
 Route::get('/brands/{brand}', [ProductController::class, 'brand'])
     ->name('products.byBrand')
     ->middleware('auth');
+
+Route::get('/products/{product}/confirm-delete', [ProductController::class, 'confirmDelete'])
+    ->name('products.confirmDelete')
+    ->middleware('auth');
