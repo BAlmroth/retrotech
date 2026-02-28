@@ -10,14 +10,14 @@
         <a href="{{ route('dashboard')}}">Dashboard</a>
         <a href="{{ route('products.index') }}">Products</a>
     <form action="" method="GET">
-        <select onchange="if(this.value) { window.location.href=this.value }">
-            <option value="">Brands</option>
+        {{-- <select onchange="if(this.value) { window.location.href=this.value }">
+            {{-- <option value="">Brands</option>
             @foreach($brands as $brand)
                 <option value="{{ route('products.byBrand', $brand->id) }}">
                     {{ $brand->name }}
                 </option>
-            @endforeach
-        </select>
+            @endforeach 
+        </select> --}}
     </form> 
 
         <form action="{{ route('logout') }}" method="POST">

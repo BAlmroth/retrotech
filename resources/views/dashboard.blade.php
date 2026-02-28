@@ -1,26 +1,18 @@
-@include('errors')
-
 @extends('layouts.app')
 
 @section('content')
-
-
 <p>Hello, {{ $user->name }}!</p>
 
-<h2>Options</h2>
-<div class="grid">
-    <a href="{{ route('products.index') }}" class="card">Show all products</a>
-    <a href="{{ route('products.create') }}" class="card">Add Product</a>
-</div>
+<a href="{{ route('products.create') }}">Add Product</a>
+<a href="{{ route('products.index') }}">Edit Products</a>
 
-<h2>Choose Brand</h2>
-<div class="grid">
-    @foreach ($brands as $brand)
-        <a href="{{ route('products.byBrand', $brand->id) }}" class="card">{{ $brand->name }}</a>
-    @endforeach
-</div>
+<h2>Products</h2>
+@foreach ($products as $product)
+    <h3>{{ $product->name }}</h3>
+    <p>Brand: {{ $product->brand->name }}</p>
+    <p>Condition: {{ $product->condition->name }}</p>
+    <p>Price: {{ $product->price }} kr</p>
+@endforeach
 
-
-<a href="/logout"> logout </a>
-
+{{ $products->links() }}
 @endsection
