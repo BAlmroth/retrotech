@@ -22,7 +22,7 @@
         @endforeach
     </select>
 
-    <button type="submit">Add Filter</button>
+    <button class="button-main" type="submit">Add Filter</button>
     <a href="{{ route('products.index') }}">Clear</a>
 </form>
 

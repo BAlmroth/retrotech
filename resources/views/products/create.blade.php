@@ -27,6 +27,6 @@
 
     <textarea name="description" placeholder="Description" required></textarea>
 
-    <button type="submit">Create Product</button>
+    <button class="button-main" type="submit">Create Product</button>
 </form>
 @endsection

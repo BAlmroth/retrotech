@@ -1,0 +1,110 @@
+/* Root*/
+:root {
+  --color-bg: #1E1E1E;
+  --color-card: #F5F5DC;
+  --color-accent: #CA7A1F;
+  --color-accent-hover: #b16c1c;
+  --color-text: #F8F8F2;
+  --color-border: #333;
+  --color-error: #B22020;
+  --color-success: #a7c075;
+
+
+  --font-main: 'IBM Plex Sans', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-main);
+  line-height: 1.6;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+h2 {
+  font-size: 1.8rem;
+  margin-bottom: 0.8rem;
+}
+
+a {
+    color: var(--color-accent);
+    text-decoration: none;
+}
+
+/* Pagnation arrpws */
+.w-5 {
+    width: 2rem;
+}
+
+input, select, textarea {
+    padding: 1rem;
+    border: 1px solid var(--color-border);
+    border-radius: 10px;
+    background-color: var(--color-border);
+    color: var(--color-text);
+}
+
+input:focus, select:focus, textarea:focus {
+    outline: 2px solid var(--color-accent);
+}
+
+/* Card */
+.card {
+  background: var(--color-card);
+  color: #111;
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+/* Main button */
+.button-main {
+  background: var(--color-accent);
+  color: white;
+  padding: 0.7rem 1.2rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.2s ease;
+}
+
+.alert {
+    color: var(--color-text);
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+.alert-error {
+    color: var(--color-error);
+}
+
+.alert-success {
+    color: var(--color-success);
+}
+
+
+@media (min-width: 768px) {
+    
+    .button-main:hover {
+        background: var(--color-accent-hover);
+    }
+    
+    .button-main:focus {
+        background: var(--color-accent);
+    }
+
+    a:hover {
+    text-decoration: underline;
+}
+
+}
