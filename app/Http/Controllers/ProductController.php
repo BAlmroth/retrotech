@@ -13,11 +13,24 @@ class ProductController extends Controller
      * Display a listing of the resource.
      */
 
-    public function index()
-    {
-        $products = Product::with(['brand', 'condition'])->orderBy('name', 'desc')->paginate(10); // 10 per side
-        return view('products.index', compact('products'));
+public function index(Request $request)
+{
+    $query = Product::with(['brand', 'condition']);
+
+    if ($request->filled('brand_id')) {
+        $query->where('brand_id', $request->brand_id);
     }
+
+    if ($request->filled('condition_id')) {
+        $query->where('condition_id', $request->condition_id);
+    }
+
+    $products = $query->orderBy('name', 'desc')->paginate(10)->withQueryString();
+    $brands = Brand::all();
+    $conditions = Condition::all();
+
+    return view('products.index', compact('products', 'brands', 'conditions'));
+}
 
     // Show products per brand
     public function brand(Brand $brand)
