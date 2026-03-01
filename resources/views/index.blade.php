@@ -1,8 +1,10 @@
-@include('errors')
+@extends('layouts.app')
+
+@section('content')
 
 <form action="/login" method="post">
     @csrf
-
+    
     <div>
         <label for="email">Email</label>
         <input name="email" id="email" type="email" />
@@ -14,3 +16,5 @@
     <button type="submit">Login</button>
     
 </form>
+
+@endsection

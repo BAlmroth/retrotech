@@ -1,3 +1,7 @@
+@extends('layouts.app')
+
+@section('content')
+
 <h1>Edit Product</h1>
 
 <form action="{{ route('products.update', $product->id) }}" method="POST">
@@ -59,3 +63,5 @@
 
 {{-- delete --}}
 <a href="{{ route('products.confirmDelete', $product->id) }}">Delete</a>
+
+@endsection
