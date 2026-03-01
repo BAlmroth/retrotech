@@ -26,10 +26,10 @@
     </form>
     </nav>
 
+    @endauth
     @include('partials.alerts')
 
     @yield('content')
 
-    @endauth
 </body>
 </html>

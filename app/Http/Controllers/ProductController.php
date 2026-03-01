@@ -13,24 +13,24 @@ class ProductController extends Controller
      * Display a listing of the resource.
      */
 
-public function index(Request $request)
-{
-    $query = Product::with(['brand', 'condition']);
+    public function index(Request $request)
+    {
+        $query = Product::with(['brand', 'condition']);
 
-    if ($request->filled('brand_id')) {
-        $query->where('brand_id', $request->brand_id);
+        if ($request->filled('brand_id')) {
+            $query->where('brand_id', $request->brand_id);
+        }
+
+        if ($request->filled('condition_id')) {
+            $query->where('condition_id', $request->condition_id);
+        }
+
+        $products = $query->orderBy('name', 'desc')->paginate(10)->withQueryString();
+        $brands = Brand::all();
+        $conditions = Condition::all();
+
+        return view('products.index', compact('products', 'brands', 'conditions'));
     }
-
-    if ($request->filled('condition_id')) {
-        $query->where('condition_id', $request->condition_id);
-    }
-
-    $products = $query->orderBy('name', 'desc')->paginate(10)->withQueryString();
-    $brands = Brand::all();
-    $conditions = Condition::all();
-
-    return view('products.index', compact('products', 'brands', 'conditions'));
-}
 
     // Show products per brand
     public function brand(Brand $brand)
@@ -113,17 +113,17 @@ public function index(Request $request)
         try {
             $product->update($validated);
             return redirect()->route('products.index')
-                ->with('success', 'Produkt uppdaterad!');
+                ->with('success', 'Product updated!');
         } catch (\Exception $e) {
             return redirect()->back()
                 ->withInput()
-                ->with('error', 'Något gick fel vid uppdateringen.');
+                ->with('error', 'Something went wrong while updating.');
         }
     }
 
     /**
      * Remove the specified resource from storage.
-     */
+    //  */
     public function destroy(Product $product)
     {
         try {
