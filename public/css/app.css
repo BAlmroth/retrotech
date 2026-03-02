@@ -2,8 +2,12 @@
 :root {
   --color-bg: #1E1E1E;
   --color-card: #F5F5DC;
-  --color-accent: #CA7A1F;
-  --color-accent-hover: #b16c1c;
+  /* --color-accent: #CA7A1F;
+  --color-accent-hover: #b16c1c; */
+  /* --color-accent: #3B82F6;
+  /* --color-accent-hover: #2563EB; */
+  --color-accent: #D32F2F;
+  --color-accent-hover: #B71C1C; 
   --color-text: #F8F8F2;
   --color-border: #333;
   --color-error: #B22020;
