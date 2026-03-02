@@ -76,6 +76,7 @@ input:focus, select:focus, textarea:focus {
   background: var(--color-accent);
   color: white;
   padding: 0.7rem 1.2rem;
+  margin: 1rem;
   border: none;
   border-radius: 6px;
   cursor: pointer;
