@@ -37,7 +37,13 @@ nav button {
   transition: 0.2s ease;
 }
 
-nav button:hover {
-  background-color: var(--color-accent);
-  color: var(--color-text);
+@media (min-width: 768px) {
+    nav button:hover {
+        background-color: var(--color-accent);
+        color: var(--color-text);
+    }
+
+    .logo:hover {
+    text-decoration: none;
+}
 }
