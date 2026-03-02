@@ -58,7 +58,7 @@
 {{-- update buttom --}}
 
 
-    <button type="submit">Update</button>
+    <button class="button-main" type="submit">Update</button>
 </form>
 
 {{-- delete --}}

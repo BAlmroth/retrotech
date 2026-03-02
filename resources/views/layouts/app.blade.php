@@ -2,6 +2,8 @@
 <html>
 <head>
     <title>Admin</title>
+    <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/dashboard.css') }}">
 </head>
 <body>
 
