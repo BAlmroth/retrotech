@@ -23,6 +23,7 @@
 .options form {
     display: flex;
     flex-direction: column;
+    gap: 0;
 }
 .options button {
     font-size: 1.5rem;
