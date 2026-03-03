@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="{{ asset('css/dashboard.css') }}">
     <link rel="stylesheet" href="{{ asset('css/header.css')}}">
     <link rel="stylesheet" href="{{ asset('css/login.css')}}">
+    <link rel="stylesheet" href="{{ asset('css/create.css') }}">
 </head>
 <body>
     

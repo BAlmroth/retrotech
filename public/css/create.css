@@ -1,0 +1,19 @@
+.create-main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.create-container {
+    max-width: 600px;
+    width: 100%;
+    margin: 1rem;
+    padding: 2rem;
+    background: var(--color-header);
+    border-radius: 12px;
+}
+
+textarea {
+    min-height: 120px;
+}
