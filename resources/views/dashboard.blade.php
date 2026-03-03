@@ -4,21 +4,26 @@
 
 <section class="dash-container">
 
-    <p>Hello, {{ $user->name }}!</p>
-    
+
     <main class="dashboard">
-        
+
         <section class="options">
+            <p>Hello, {{ $user->name }}!</p>
             <h2>Dashboard</h2>
-            <a class="button-main" href="{{ route('products.index') }}">All Products</a>
-            <a class="button-main" href="{{ route('products.create') }}">Add Product</a>
-            <a class="button-main" href="{{ route('products.index') }}">Edit Products</a>
+            <form method="GET" action="{{ route('products.index') }}">
+                <button class="button-main" type="submit">All Products</button>
+                <small>View and manage all products</small> 
+            </form>
+            <form method="GET" action="{{ route('products.create') }}">
+                <button class="button-main" type="submit">Add Product</button>
+            </form>
+
         </section>
-        
+
         <section class="quick-view">
-            
+
             <h3>Quick View</h3>
-            
+
             {{-- filetring --}}
             <form method="GET" action="{{ route('dashboard') }}">
                 <select name="brand_id">
@@ -29,7 +34,7 @@
                     </option>
                     @endforeach
                 </select>
-                
+
                 <select name="condition_id">
                     <option value="">All Conditions</option>
                     @foreach ($conditions as $condition)
@@ -38,11 +43,11 @@
                     </option>
                     @endforeach
                 </select>
-                
+
                 <button class="button-main" type="submit">Add Filter</button>
                 <a href="{{ route('dashboard') }}">Clear</a>
             </form>
-            
+
             <div class="quick-products">
                     {{-- quick overview of prodycts --}}
                     @forelse ($products as $product)
@@ -51,14 +56,16 @@
                         <p><strong>Brand:</strong> {{ $product->brand->name }}</p>
                         <p><strong>Condition:</strong> {{ $product->condition->name }}</p>
                         <p><strong>Price:</strong> {{ $product->price }} kr</p>
-                        <a class="button-main" href="{{ route('products.show', $product->id) }}?from={{ url()->current() }}">
-                            See More
-                        </a>
+
+                        <form method="GET" action="{{ route('products.show', $product->id) }}">
+                            <input type="hidden" name="from" value="{{ url()->current() }}">
+                            <button class="button-main" type="submit">See More</button>
+                        </form>
                     </div>
                     @empty
                     <p>No products found.</p>
                     @endforelse
-                    
+
                 </div>
             {{ $products->links() }}
         </section>

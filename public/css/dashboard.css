@@ -2,32 +2,47 @@
     margin: 2rem;
 }
 
-
 .dashboard {
     display: flex;
     flex-direction: column;
     gap: 2rem;
 }
 
-/* options */
+.options h2 {
+    font-size: 3rem;
+    margin-bottom: 3rem;
+}
+.options p {
+    font-size: 2rem;
+}
+
 .options {
     display: flex;
     flex-direction: column;
 }
-
-.options a {
-    margin-bottom: 0.8rem;
+.options form {
+    display: flex;
+    flex-direction: column;
+}
+.options button {
+    font-size: 1.5rem;
+}
+.options small {
+    font-size: 0.8rem;
+    color: #898989;
+    margin: 0 0.5rem 1.5rem;
 }
 
-/* quickview */
 .quick-view {
-    display: flex;
+    display: none;
     flex-direction: column;
     gap: 1.5rem;
     align-items: center;
 }
 
-/* products */
+.quick-view form {
+    flex-direction: row;
+}
 
 .quick-products {
     width: 100%;
@@ -42,22 +57,35 @@
     padding: 1.5rem;
     border-radius: 10px;
     width: 100%;
+    position: relative;
+    padding-bottom: 4rem; /* make room for the button */
 }
 
-/* desktop */
-@media (min-width: 768px) {
+.product-card form {
+    position: absolute;
+    bottom: 1rem;
+    left: 1rem;
+}
 
+.product-card h3 {
+    font-size: 1rem;
+}
+
+@media (min-width: 768px) {
+    
     .dashboard {
+        margin: 1rem;
         flex-direction: row;
-        align-items: flex-start;
+        justify-content: space-around;
     }
 
     .options {
+        margin-top: 3rem;
         width: 250px;
-
     }
 
     .quick-view {
+        display: flex;
         flex: 0 0 50%;
     }
 
@@ -69,5 +97,6 @@
 
     .product-card {
         width: 200px;
+        height: 200px;
     }
 }
