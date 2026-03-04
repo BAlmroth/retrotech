@@ -25,6 +25,7 @@ body {
   color: var(--color-text);
   font-family: var(--font-main);
   line-height: 1.6;
+  min-height: 100dvh;
 }
 
 h1 {
@@ -114,6 +115,31 @@ input:focus, select:focus, textarea:focus {
   display: none;
 }
 
+/* main card */
+
+/* Centered page card layout */
+.page-card-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 0px;
+    width: 100%;
+    min-height: 100vh;
+}
+
+.page-card {
+    width: 100%;
+    max-width: 600px;
+    margin: 1rem;
+    padding: 2rem;
+    background: var(--color-header);
+    border-radius: 12px;
+    border: 1px solid var(--color-border);
+}
+
+.page-card-wrapper--centered {
+    align-items: center;
+}
 
 @media (min-width: 768px) {
     

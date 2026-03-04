@@ -1,8 +1,8 @@
 @extends('layouts.app')
 
 @section('content')
-<main class="create-main">
-    <div class="create-container">
+<main class="page-card-wrapper">
+    <div class="page-card create-container">
         <h1>Add Product</h1>
         
         <form action="{{ route('products.store') }}" method="POST">
