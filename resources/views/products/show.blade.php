@@ -10,5 +10,5 @@
 
 <a href="{{ route('products.edit', $product->id) }}">Edit</a>
 <a href="{{ route('products.confirmDelete', $product->id) }}">Delete</a>
-<a href="{{ request('from', route('dashboard')) }}">Back</a>
+<a href="{{ url()->previous() }}">Back</a>
 @endsection

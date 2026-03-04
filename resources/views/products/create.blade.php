@@ -43,6 +43,7 @@
             
             <button class="button-main" type="submit">Create Product</button>
         </form>
+        <a href="{{ url()->previous() }}">Back</a>
     </div>
 </main>
     @endsection
