@@ -2,19 +2,27 @@
 
 @section('content')
 
-<form action="/login" method="post">
-    @csrf
-    
-    <div>
-        <label for="email">Email</label>
-        <input name="email" id="email" type="email" />
+<main class="page-card-wrapper page-card-wrapper--centered">
+    <div class="page-card login-form">
+        <form action="/login" method="post" aria-label="Logga in">
+            @csrf
+            <h1>Log in</h1>
+
+            <div>
+                <label for="email">Email</label>
+                <input name="email" id="email" type="email" 
+                    autocomplete="email" required />
+            </div>
+            <div>
+                <label for="password">Password</label>
+                <input name="password" id="password" type="password" 
+                    autocomplete="current-password" required />
+            </div>
+
+            <button class="button-main" type="submit">Log in</button>
+        </form>
     </div>
-    <div>
-        <label for="password">Password</label>
-        <input name="password" id="password" type="password" />
-    </div>
-    <button type="submit">Login</button>
-    
-</form>
+</main>
 
 @endsection
+

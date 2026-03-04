@@ -2,29 +2,32 @@
 <html>
 <head>
     <title>Admin</title>
+    <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/dashboard.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/header.css')}}">
+    <link rel="stylesheet" href="{{ asset('css/login.css')}}">
+    <link rel="stylesheet" href="{{ asset('css/create.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/table.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/delete.css') }}">
 </head>
 <body>
-
+    
     @auth
-    <nav>
-        <a href="{{ route('dashboard')}}">Dashboard</a>
-        <a href="{{ route('products.index') }}">Products</a>
-    <form action="" method="GET">
-        {{-- <select onchange="if(this.value) { window.location.href=this.value }">
-            {{-- <option value="">Brands</option>
-            @foreach($brands as $brand)
-                <option value="{{ route('products.byBrand', $brand->id) }}">
-                    {{ $brand->name }}
-                </option>
-            @endforeach 
-        </select> --}}
-    </form> 
+    <header>
+        <nav>
+            <a class="logo" href="{{ route('dashboard')}}">Retrotech</a>
 
-        <form action="{{ route('logout') }}" method="POST">
-        @csrf
-        <button type="submit">Logout</button>
-    </form>
-    </nav>
+            <div class="nav-right">
+                <a href="{{ route('dashboard')}}">Dashboard</a>
+                <a href="{{ route('products.index') }}">Products</a>
+
+                <form action="{{ route('logout') }}" method="POST">
+                    @csrf
+                    <button type="submit">Logout</button>
+                </form>
+            </div>
+        </nav>  
+    </header>
 
     @endauth
     @include('partials.alerts')

@@ -25,7 +25,7 @@ class ProductController extends Controller
             $query->where('condition_id', $request->condition_id);
         }
 
-        $products = $query->orderBy('name', 'desc')->paginate(10)->withQueryString();
+        $products = $query->orderBy('name', 'desc')->paginate(15)->withQueryString();
         $brands = Brand::all();
         $conditions = Condition::all();
 

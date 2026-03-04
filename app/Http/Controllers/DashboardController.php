@@ -26,7 +26,7 @@ class DashboardController extends Controller
             $query->where('condition_id', $request->condition_id);
         }
 
-        $products = $query->orderBy('name', 'desc')->paginate(5)->withQueryString();
+        $products = $query->orderBy('name', 'desc')->paginate(10)->withQueryString();
         $user = Auth::user();
         $brands = Brand::all();
         $conditions = Condition::all();

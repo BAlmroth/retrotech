@@ -1,0 +1,79 @@
+/* Products Table */
+.products-index {
+    margin: 2rem;
+}
+
+.index-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.2rem;
+}
+
+.filter-bar {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-bottom: 1.2rem;
+}
+
+.filter-bar select {
+    width: auto;
+}
+
+.products-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.95rem;
+    table-layout: fixed;
+}
+
+.products-table th:nth-child(1) { width: 5%; }
+.products-table th:nth-child(7) { width: 15%; }
+
+.products-table th {
+    text-align: left;
+    padding: 0.65rem 1rem;
+    background: var(--color-header);
+    border-bottom: 2px solid var(--color-border);
+    font-weight: 600;
+    color: var(--color-text);
+}
+
+.products-table td {
+    padding: 0.65rem 1rem;
+    border-bottom: 1px solid var(--color-border);
+    vertical-align: middle;
+    color: var(--color-text);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.products-table tbody tr:hover {
+    background: var(--color-header);
+}
+
+.products-table .desc {
+    color: #999;
+    font-size: 0.88rem;
+}
+
+.products-table .actions {
+    display: flex;
+    gap: 0.6rem;
+}
+
+.products-table .actions a.danger {
+    color: var(--color-accent);
+}
+
+.products-table .empty {
+    text-align: center;
+    padding: 2rem;
+    color: #999;
+}
+.products-table tbody tr[data-href] {
+    cursor: pointer;
+}
