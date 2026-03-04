@@ -31,7 +31,7 @@
     <table class="products-table">
         <thead>
             <tr>
-                <th>#</th>
+                <th>#id</th>
                 <th>Name</th>
                 <th>Brand</th>
                 <th>Condition</th>
@@ -42,7 +42,7 @@
         </thead>
         <tbody>
             @forelse ($products as $product)
-            <tr>
+            <tr data-href="{{ route('products.show', $product->id) }}">
                 <td>{{ $product->id }}</td>
                 <td>{{ $product->name }}</td>
                 <td>{{ $product->brand->name }}</td>
@@ -65,4 +65,26 @@
 
     {{ $products->links() }}
 
-</div>
+</div> 
+{{-- screen jump stop --}}
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        window.scrollTo(0, sessionStorage.getItem('scrollPos') || 0);
+        sessionStorage.removeItem('scrollPos');
+
+        document.querySelectorAll('.filter-bar, a').forEach(el => {
+            el.addEventListener('click', () => {
+                sessionStorage.setItem('scrollPos', window.scrollY);
+            });
+        });
+
+        //entire row clickable, but not edit and delete
+        document.querySelectorAll('tr[data-href]').forEach(row => {
+            row.addEventListener('click', (e) => {
+                if (!e.target.closest('a')) {
+                    window.location = row.dataset.href;
+                }
+            });
+        });
+    });
+</script>

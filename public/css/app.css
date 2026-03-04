@@ -64,7 +64,7 @@ label {
 
 
 input, select, textarea {
-    padding: 1rem;
+    padding: 0.5rem;
     border: 1px solid var(--color-border);
     border-radius: 10px;
     background-color: var(--color-border);

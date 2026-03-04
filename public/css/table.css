@@ -26,7 +26,11 @@
     width: 100%;
     border-collapse: collapse;
     font-size: 0.95rem;
+    table-layout: fixed;
 }
+
+.products-table th:nth-child(1) { width: 5%; }
+.products-table th:nth-child(7) { width: 15%; }
 
 .products-table th {
     text-align: left;
@@ -42,6 +46,9 @@
     border-bottom: 1px solid var(--color-border);
     vertical-align: middle;
     color: var(--color-text);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 .products-table tbody tr:hover {
@@ -66,4 +73,7 @@
     text-align: center;
     padding: 2rem;
     color: #999;
+}
+.products-table tbody tr[data-href] {
+    cursor: pointer;
 }
