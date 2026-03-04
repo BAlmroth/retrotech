@@ -5,99 +5,20 @@
 .dashboard {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
 }
 
-.options h2 {
+.greeting p {
+    font-size: 1.2rem;
+    color: #999;
+}
+
+.greeting h2 {
     font-size: 3rem;
-    margin-bottom: 3rem;
-}
-.options p {
-    font-size: 2rem;
-}
-
-.options {
-    display: flex;
-    flex-direction: column;
-}
-.options form {
-    display: flex;
-    flex-direction: column;
-    gap: 0;
-}
-.options button {
-    font-size: 1.5rem;
-}
-.options small {
-    font-size: 0.8rem;
-    color: #898989;
-    margin: 0 0.5rem 1.5rem;
-}
-
-.quick-view {
-    display: none;
-    flex-direction: column;
-    gap: 1.5rem;
-    align-items: center;
-}
-
-.quick-view form {
-    flex-direction: row;
-}
-
-.quick-products {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-}
-
-.product-card {
-    background: var(--color-card);
-    color: #111;
-    padding: 1.5rem;
-    border-radius: 10px;
-    width: 100%;
-    position: relative;
-    padding-bottom: 4rem; /* make room for the button */
-}
-
-.product-card form {
-    position: absolute;
-    bottom: 1rem;
-    left: 1rem;
-}
-
-.product-card h3 {
-    font-size: 1rem;
+    margin-bottom: 0;
 }
 
 @media (min-width: 768px) {
-    
     .dashboard {
         margin: 1rem;
-        flex-direction: row;
-        justify-content: space-around;
-    }
-
-    .options {
-        margin-top: 3rem;
-        width: 250px;
-    }
-
-    .quick-view {
-        display: flex;
-        flex: 0 0 50%;
-    }
-
-    .quick-products {
-        flex-direction: row;
-        flex-wrap: wrap;
-        gap: 2rem;
-    }
-
-    .product-card {
-        width: 200px;
-        height: 200px;
     }
 }
