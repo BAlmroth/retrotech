@@ -12,7 +12,8 @@
             {{-- uppdate name --}}
             <div>
             <label>Name:</label>
-            <input type="text" name="name" value="{{ $product->name }}">
+            <input type="text" name="name" value="{{ old('name', $product->name) }}">
+            @error('name') <span class="field-error">{{ $message }}</span> @enderror
         </div>
 
             {{-- uppdate cat --}}
@@ -26,6 +27,7 @@
                     </option>
                 @endforeach
             </select>
+            @error('brand_id') <span class="field-error">{{ $message }}</span> @enderror
             </div>
 
         {{-- uppdate cond --}}
@@ -40,12 +42,19 @@
                     </option>
                 @endforeach
             </select>
+            @error('condition_id') <span class="field-error">{{ $message }}</span> @enderror
         </div>
 
             {{-- uppdate price --}}
         <div>
             <label>Price:</label>
-            <input type="number" name="price" value="{{ $product->price }}">
+            <input type="number" name="price" value="{{ old('price', $product->price) }}">
+            @error('price') <span class="field-error">{{ $message }}</span> @enderror
+        </div>
+        {{-- update description --}}
+        <div>
+            <label>Description:</label>
+            <textarea name="description">{{ old('description', $product->description) }}</textarea>
         </div>
 
         {{-- update buttom --}}
