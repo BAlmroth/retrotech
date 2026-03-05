@@ -1,13 +1,36 @@
 @extends('layouts.app')
 
 @section('content')
-<h1>{{ $product->name }}</h1>
-<p>Brand: {{ $product->brand->name }}</p>
-<p>Condition: {{ $product->condition->name }}</p>
-<p>Price: {{ $product->price }} kr</p>
-<p>Description: {{ $product->description }}</p>
+<main class="page-card-wrapper">
+    <div class="page-card">
 
-<a href="{{ route('products.edit', $product->id) }}">Edit</a>
-<a href="{{ route('products.confirmDelete', $product->id) }}">Delete</a>
-<a href="{{ url()->previous() }}">Back</a>
+        <h1>{{ $product->name }}</h1>
+
+        <table class="detail-table">
+            <tr>
+                <th>Brand</th>
+                <td>{{ $product->brand->name }}</td>
+            </tr>
+            <tr>
+                <th>Condition</th>
+                <td>{{ $product->condition->name }}</td>
+            </tr>
+            <tr>
+                <th>Price</th>
+                <td>{{ $product->price }} kr</td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>{{ $product->description }}</td>
+            </tr>
+        </table>
+
+        <div class="product-actions">
+            <a href="{{ route('products.edit', $product->id) }}" class="button-main">Edit</a>
+            <a href="{{ route('products.confirmDelete', $product->id) }}" class="button-danger">Delete</a>
+            <a href="{{ url()->previous() }}">Back</a>
+        </div>
+
+    </div>
+</main>
 @endsection
