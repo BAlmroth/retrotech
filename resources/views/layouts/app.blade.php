@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="{{ asset('css/create.css') }}">
     <link rel="stylesheet" href="{{ asset('css/table.css') }}">
     <link rel="stylesheet" href="{{ asset('css/delete.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/show.css') }}">
 </head>
 <body>
     
