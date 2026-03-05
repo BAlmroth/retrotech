@@ -17,7 +17,6 @@ return new class extends Migration
             $table->string('description');
             $table->foreignId('brand_id')->constrained('brands');
             $table->foreignId('condition_id')->constrained('conditions');
-            $table->boolean('in_stock')->default(true);
             $table->integer('price')->nullable();
             $table->timestamps();
         });

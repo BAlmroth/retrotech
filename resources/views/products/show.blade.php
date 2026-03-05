@@ -5,7 +5,6 @@
 <p>Brand: {{ $product->brand->name }}</p>
 <p>Condition: {{ $product->condition->name }}</p>
 <p>Price: {{ $product->price }} kr</p>
-<p>In Stock: {{ $product->in_stock ? 'Yes' : 'No' }}</p>
 <p>Description: {{ $product->description }}</p>
 
 <a href="{{ route('products.edit', $product->id) }}">Edit</a>

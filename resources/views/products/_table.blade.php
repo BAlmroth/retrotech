@@ -2,7 +2,9 @@
 
     <div class="index-header">
         <h2>Products</h2>
-        <a href="{{ route('products.create') }}" class="button-main">+ Add Product</a>
+        <form method="GET" action="{{ route('products.create') }}">
+            <button class="button-main" type="submit">+ Add Product</button>
+        </form>
     </div>
 
     <form class="filter-bar" method="GET" action="{{ $filterRoute }}">
