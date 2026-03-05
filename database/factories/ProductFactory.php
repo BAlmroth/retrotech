@@ -43,7 +43,6 @@ class ProductFactory extends Factory
             'brand_id' => $brand->id,
             'condition_id' => fake()->randomElement(Condition::pluck('id')),
             'description' => fake()->sentence(),
-            'in_stock' => fake()->boolean(),
             'price' => fake()->numberBetween(500, 4000),
         ];
     }

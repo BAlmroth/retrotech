@@ -29,7 +29,6 @@ class ProductsTableSeeder extends Seeder
             'description' => 'Used - Good',
             'brand_id' => $nintendo->id,
             'condition_id' => $good->id,
-            'in_stock' => true,
             'price' => '400'
         ]);
 
@@ -38,7 +37,6 @@ class ProductsTableSeeder extends Seeder
             'description' => 'Used - Good',
             'brand_id' => $sony->id,
             'condition_id' => $likeNew->id,
-            'in_stock' => true
         ]);
 
         Product::factory(10)->create();

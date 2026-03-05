@@ -63,7 +63,6 @@ class ProductController extends Controller
             'brand_id' => 'required|exists:brands,id',
             'condition_id' => 'required|exists:conditions,id',
             'price' => 'required|numeric|min:0',
-            'in_stock' => 'required|boolean',
             'description' => 'nullable|string',
         ]);
 
@@ -106,7 +105,6 @@ class ProductController extends Controller
             'brand_id' => 'required|exists:brands,id',
             'condition_id' => 'required|exists:conditions,id',
             'price' => 'required|numeric|min:0',
-            'in_stock' => 'required|boolean',
             'description' => 'nullable|string',
         ]);
 
