@@ -37,6 +37,7 @@ class ProductsTableSeeder extends Seeder
             'description' => 'Used - Good',
             'brand_id' => $sony->id,
             'condition_id' => $likeNew->id,
+            'price' => '500'
         ]);
 
         Product::factory(10)->create();

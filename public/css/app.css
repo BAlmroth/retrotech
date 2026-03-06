@@ -141,6 +141,11 @@ input:focus, select:focus, textarea:focus {
     align-items: center;
 }
 
+.field-error {
+    color: red;
+    font-size: 0.85rem;
+}
+
 @media (min-width: 768px) {
     
     .button-main:hover {
