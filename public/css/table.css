@@ -30,7 +30,8 @@
 }
 
 .products-table th:nth-child(1) { width: 5%; }
-.products-table th:nth-child(7) { width: 15%; }
+.products-table th:nth-child(6) { width: 10%; }
+.products-table th:nth-child(8) { width: 15%; }
 
 .products-table th {
     text-align: left;

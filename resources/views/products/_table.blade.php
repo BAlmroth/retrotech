@@ -45,6 +45,7 @@
                 <th>Brand</th>
                 <th>Condition</th>
                 <th>Price</th>
+                <th>Added</th>
                 <th>Description</th>
                 <th>Actions</th>
             </tr>
@@ -57,6 +58,7 @@
                 <td>{{ $product->brand->name }}</td>
                 <td>{{ $product->condition->name }}</td>
                 <td>{{ $product->price }} kr</td>
+                <td>{{ $product->created_at->format('d M Y') }}</td>
                 <td class="desc">{{ Str::limit($product->description, 60) }}</td>
                 <td class="actions">
                     <a href="{{ route('products.show', $product->id) }}">View</a>
