@@ -20,4 +20,14 @@ class Product extends Model
     {
         return $this->belongsTo(Condition::class);
     }
+    // sorting logic
+    public function scopeSorted($query, $sort)
+    {
+        return match ($sort) {
+            'oldest'     => $query->orderBy('created_at', 'asc'),
+            'price_high' => $query->orderBy('price', 'desc'),
+            'price_low'  => $query->orderBy('price', 'asc'),
+            default      => $query->orderBy('created_at', 'desc'),
+        };
+    }
 }

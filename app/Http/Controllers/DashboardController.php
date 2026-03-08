@@ -26,7 +26,8 @@ class DashboardController extends Controller
             $query->where('condition_id', $request->condition_id);
         }
 
-        $products = $query->orderBy('name', 'desc')->paginate(10)->withQueryString();
+        $sort = $request->get('sort', 'newest');
+        $products = $query->sorted($sort)->paginate(10)->withQueryString();
         $user = Auth::user();
         $brands = Brand::all();
         $conditions = Condition::all();
@@ -35,12 +36,12 @@ class DashboardController extends Controller
     }
 
 
-    public function __invoke(Request $request)
-    {
-        $user = Auth::user();
+    // public function __invoke(Request $request)
+    // {
+    //     $user = Auth::user();
 
-        return view('dashboard', [
-            'user' => $user
-        ]);
-    }
+    //     return view('dashboard', [
+    //         'user' => $user
+    //     ]);
+    // }
 }

@@ -8,27 +8,34 @@
     </div>
 
     <form class="filter-bar" method="GET" action="{{ $filterRoute }}">
-        <select name="brand_id">
-            <option value="">All Brands</option>
-            @foreach ($brands as $brand)
-                <option value="{{ $brand->id }}" {{ request('brand_id') == $brand->id ? 'selected' : '' }}>
-                    {{ $brand->name }}
-                </option>
-            @endforeach
-        </select>
+    <select name="brand_id">
+        <option value="">All Brands</option>
+        @foreach ($brands as $brand)
+            <option value="{{ $brand->id }}" {{ request('brand_id') == $brand->id ? 'selected' : '' }}>
+                {{ $brand->name }}
+            </option>
+        @endforeach
+    </select>
 
-        <select name="condition_id">
-            <option value="">All Conditions</option>
-            @foreach ($conditions as $condition)
-                <option value="{{ $condition->id }}" {{ request('condition_id') == $condition->id ? 'selected' : '' }}>
-                    {{ $condition->name }}
-                </option>
-            @endforeach
-        </select>
+    <select name="condition_id">
+        <option value="">All Conditions</option>
+        @foreach ($conditions as $condition)
+            <option value="{{ $condition->id }}" {{ request('condition_id') == $condition->id ? 'selected' : '' }}>
+                {{ $condition->name }}
+            </option>
+        @endforeach
+    </select>
 
-        <button class="button-main" type="submit">Filter</button>
-        <a class="button-clear" href="{{ $filterRoute }}">Clear</a>
-    </form>
+    <select name="sort">
+        <option value="newest" {{ request('sort') == 'newest' ? 'selected' : '' }}>Newest</option>
+        <option value="oldest" {{ request('sort') == 'oldest' ? 'selected' : '' }}>Oldest</option>
+        <option value="price_high" {{ request('sort') == 'price_high' ? 'selected' : '' }}>Price: High to Low</option>
+        <option value="price_low" {{ request('sort') == 'price_low' ? 'selected' : '' }}>Price: Low to High</option>
+    </select>
+
+    <button class="button-main" type="submit">Filter</button>
+    <a class="button-clear" href="{{ $filterRoute }}">Clear</a>
+</form>
 
     <table class="products-table">
         <thead>
