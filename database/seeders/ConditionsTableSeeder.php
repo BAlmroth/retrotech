@@ -15,10 +15,10 @@ class ConditionsTableSeeder extends Seeder
     {
         $conditions=[
             'New',
-            'Used - Like New',
-            'Used - Good',
-            'Used - Acceptable',
-            'For Parts or Not Working'
+            'Like New',
+            'Good',
+            'Acceptable',
+            'For Parts'
         ];
 
         foreach($conditions as $condition){
