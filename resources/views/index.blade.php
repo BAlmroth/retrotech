@@ -4,6 +4,7 @@
 
 <main class="page-card-wrapper page-card-wrapper--centered">
     <div class="page-card login-form">
+        @include('partials.alerts')
         <form action="/login" method="post" aria-label="Logga in">
             @csrf
             <h1>Log in</h1>
