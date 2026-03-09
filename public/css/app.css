@@ -99,16 +99,24 @@ input:focus, select:focus, textarea:focus {
 }
 
 .alert {
-    color: var(--color-text);
-    padding: 1rem;
-    margin-bottom: 1rem;
-}
-.alert-error {
-    color: var(--color-error);
+    text-align: center;
+    padding: 1.5rem;
+    margin: 1rem auto;
+    max-width: 600px;
+    border-radius: 8px;
+    border: 1px solid;
 }
 
 .alert-success {
     color: var(--color-success);
+    background: rgba(167, 192, 117, 0.08);
+    border-color: var(--color-success);
+}
+
+.alert-error {
+    color: var(--color-error);
+    background: rgba(178, 32, 32, 0.08);
+    border-color: var(--color-error);
 }
 
 .logo {
