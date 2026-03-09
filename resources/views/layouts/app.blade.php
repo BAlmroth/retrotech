@@ -1,7 +1,9 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Admin</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RetroTech</title>
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
     <link rel="stylesheet" href="{{ asset('css/dashboard.css') }}">
     <link rel="stylesheet" href="{{ asset('css/header.css')}}">
@@ -14,7 +16,7 @@
     
     @auth
     <header>
-        <nav>
+        <nav aria-label="Main navigation">
             <a class="logo" href="{{ route('dashboard')}}">Retrotech</a>
 
             <div class="nav-right">
@@ -28,8 +30,8 @@
             </div>
         </nav>  
     </header>
-
     @endauth
+
     @include('partials.alerts')
 
     @yield('content')

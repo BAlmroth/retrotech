@@ -7,8 +7,10 @@
         </form>
     </div>
 
-    <form class="filter-bar" method="GET" action="{{ $filterRoute }}">
-    <select name="brand_id">
+    <form class="filter-bar" method="GET" action="{{ $filterRoute }}" aria-label="Filter products">
+
+    <label for="brand_id" class="sr-only">Brand</label>
+    <select name="brand_id" id="brand_id">
         <option value="">All Brands</option>
         @foreach ($brands as $brand)
             <option value="{{ $brand->id }}" {{ request('brand_id') == $brand->id ? 'selected' : '' }}>
@@ -17,7 +19,8 @@
         @endforeach
     </select>
 
-    <select name="condition_id">
+    <label for="condition_id" class="sr-only">Condition</label>
+    <select name="condition_id" id="condition_id">
         <option value="">All Conditions</option>
         @foreach ($conditions as $condition)
             <option value="{{ $condition->id }}" {{ request('condition_id') == $condition->id ? 'selected' : '' }}>
@@ -26,7 +29,8 @@
         @endforeach
     </select>
 
-    <select name="sort">
+    <label for="sort" class="sr-only">Sort by</label>
+    <select name="sort" id="sort">
         <option value="newest" {{ request('sort') == 'newest' ? 'selected' : '' }}>Newest</option>
         <option value="oldest" {{ request('sort') == 'oldest' ? 'selected' : '' }}>Oldest</option>
         <option value="price_high" {{ request('sort') == 'price_high' ? 'selected' : '' }}>Price: High to Low</option>
@@ -38,6 +42,7 @@
 </form>
 
     <table class="products-table">
+        <caption class="sr-only">Product list</caption>
         <thead>
             <tr>
                 <th>#id</th>
@@ -61,14 +66,14 @@
                 <td>{{ $product->created_at->format('d M Y') }}</td>
                 <td class="desc">{{ Str::limit($product->description, 60) }}</td>
                 <td class="actions">
-                    <a href="{{ route('products.show', $product->id) }}">View</a>
-                    <a href="{{ route('products.edit', $product->id) }}">Edit</a>
-                    <a href="{{ route('products.confirmDelete', $product->id) }}" class="danger">Delete</a>
+                    <a href="{{ route('products.show', $product->id) }}" aria-label="View {{ $product->name }}">View</a>
+                    <a href="{{ route('products.edit', $product->id) }}" aria-label="Edit {{ $product->name }}">Edit</a>
+                    <a href="{{ route('products.confirmDelete', $product->id) }}" class="danger" aria-label="Delete {{ $product->name }}">Delete</a>
                 </td>
             </tr>
             @empty
             <tr>
-                <td colspan="7" class="empty">No products found.</td>
+                <td colspan="8" class="empty">No products found.</td>
             </tr>
             @endforelse
         </tbody>
