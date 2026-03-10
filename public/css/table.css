@@ -62,7 +62,6 @@
     border-bottom: none;
 }
 
-/* Show column label on mobile */
 .products-table td::before {
     content: attr(data-label);
     font-weight: 600;
@@ -128,9 +127,8 @@
         border-bottom: 1px solid var(--color-border);
         border-top: none;
         vertical-align: middle;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        white-space: nowrap;
+        word-break: break-word;
+        overflow-wrap: break-word;
     }
 
     .products-table td::before {
@@ -147,12 +145,18 @@
     }
 
     .products-table {
-        table-layout: fixed;
+        table-layout: auto;
     }
 
-    .products-table th:nth-child(1) { width: 5%; }
-    .products-table th:nth-child(6) { width: 10%; }
-    .products-table th:nth-child(8) { width: 15%; }
+    .products-table th:nth-child(1) {
+        width: 5%;
+    }
+    .products-table th:nth-child(6) {
+        width: 12%;
+    }
+    .products-table th:nth-child(8) {
+        width: 18%;
+    }
 
     .products-table tbody tr:hover {
         background: var(--color-header);
