@@ -36,5 +36,8 @@
 
     @yield('content')
 
+    <footer class="site-footer">
+            <p class="footer-copy">© 2025 RetroTech</p>
+    </footer>
 </body>
 </html>
