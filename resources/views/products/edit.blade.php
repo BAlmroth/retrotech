@@ -65,10 +65,11 @@
     </div>
 
     {{-- update description --}}
-    <div>
-        <label for="description">Description:</label>
-        <textarea name="description" id="description">{{ old('description', $product->description) }}</textarea>
-    </div>
+    <textarea name="description" id="description" 
+        aria-describedby="description-error">{{ old('description', $product->description) }}</textarea>
+        @error('description')
+        <span class="field-error" id="description-error" role="alert">{{ $message }}</span>
+        @enderror
 
     <button class="button-main" type="submit">Update</button>
 </form>
