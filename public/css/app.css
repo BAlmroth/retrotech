@@ -163,6 +163,18 @@ input:focus, select:focus, textarea:focus, button:focus, a:focus {
     white-space: nowrap;
 }
 
+.footer-copy {
+  font-size: 0.8rem;
+  opacity: 0.4;
+  margin: 0;
+}
+
+.site-footer {
+  padding: 4rem 2rem 2.5rem;
+  margin-top: 4rem;
+  text-align: center;
+}
+
 @media (min-width: 768px) {
     .button-main:hover {
         background: var(--color-accent-hover);
