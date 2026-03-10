@@ -1,41 +1,40 @@
 /* Root*/
 :root {
-  --color-bg: #1E1E1E;
-  --color-card: #F5F5DC;
-  --color-header: #151515;
-  --color-accent: #D32F2F;
-  --color-accent-hover: #B71C1C; 
-  --color-text: #F8F8F2;
-  --color-border: #333;
-  --color-error: #B22020;
-  --color-success: #a7c075;
+    --color-bg: #1e1e1e;
+    --color-card: #f5f5dc;
+    --color-header: #151515;
+    --color-accent: #d32f2f;
+    --color-accent-hover: #b71c1c;
+    --color-text: #f8f8f2;
+    --color-border: #333;
+    --color-error: #ff0000;
+    --color-success: #a7c075;
 
-
-  --font-main: 'IBM Plex Sans', sans-serif;
+    --font-main: "IBM Plex Sans", sans-serif;
 }
 
 * {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 body {
-  background: var(--color-bg);
-  color: var(--color-text);
-  font-family: var(--font-main);
-  line-height: 1.6;
-  min-height: 100dvh;
+    background: var(--color-bg);
+    color: var(--color-text);
+    font-family: var(--font-main);
+    line-height: 1.6;
+    min-height: 100dvh;
 }
 
 h1 {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
 }
 
 h2 {
-  font-size: 1.8rem;
-  margin-bottom: 0.8rem;
+    font-size: 1.8rem;
+    margin-bottom: 0.8rem;
 }
 
 a {
@@ -63,8 +62,9 @@ label {
     font-size: 0.9rem;
 }
 
-
-input, select, textarea {
+input,
+select,
+textarea {
     padding: 0.5rem;
     border: 1px solid var(--color-border);
     border-radius: 10px;
@@ -73,29 +73,31 @@ input, select, textarea {
     width: 100%;
 }
 
-input:focus, select:focus, textarea:focus {
+input:focus,
+select:focus,
+textarea:focus {
     outline: 2px solid var(--color-accent);
 }
 
 /* Card */
 .card {
-  background: var(--color-card);
-  color: #111;
-  padding: 1.5rem;
-  border-radius: 8px;
-  margin-bottom: 1rem;
+    background: var(--color-card);
+    color: #111;
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-bottom: 1rem;
 }
 
 /* Main button */
 .button-main {
-  background: var(--color-accent);
-  color: white;
-  padding: 0.7rem 1.2rem;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-  font-weight: 600;
-  transition: 0.2s ease;
+    background: var(--color-accent);
+    color: white;
+    padding: 0.7rem 1.2rem;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.2s ease;
 }
 
 .alert {
@@ -105,6 +107,7 @@ input:focus, select:focus, textarea:focus {
     max-width: 600px;
     border-radius: 8px;
     border: 1px solid;
+    font-size: 1.2rem;
 }
 
 .alert-success {
@@ -115,17 +118,14 @@ input:focus, select:focus, textarea:focus {
 
 .alert-error {
     color: var(--color-error);
-    background: rgba(178, 32, 32, 0.08);
+    background: rgba(149, 45, 45, 0.08);
     border-color: var(--color-error);
 }
 
 .logo {
-  display: none;
+    display: none;
 }
 
-/* main card */
-
-/* Centered page card layout */
 .page-card-wrapper {
     display: flex;
     justify-content: center;
@@ -155,25 +155,21 @@ input:focus, select:focus, textarea:focus {
 }
 
 @media (min-width: 768px) {
-    
     .button-main:hover {
         background: var(--color-accent-hover);
     }
-    
+
     .button-main:focus {
         background: var(--color-accent);
     }
 
     a:hover {
-    text-decoration: underline;
+        text-decoration: underline;
     }
-
 }
 
 @media (min-width: 500px) {
-    
-  .logo {
-    display: block;
-  }
-
+    .logo {
+        display: block;
+    }
 }
