@@ -42,7 +42,8 @@
             
             <div>
                 <label for="description">Description</label>
-                <textarea name="description" id="description">{{ old('description') }}</textarea>
+                <textarea name="description" id="description" aria-describedby="description-error">{{ old('description') }}</textarea>
+                @error('description') <span class="field-error" id="description-error">{{ $message }}</span> @enderror
             </div>
             
             <button class="button-main" type="submit">Create Product</button>

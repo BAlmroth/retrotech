@@ -7,20 +7,21 @@
         <h1>{{ $product->name }}</h1>
 
         <table class="detail-table">
+        <caption class="sr-only">Product details</caption>
             <tr>
-                <th>Brand</th>
+                <th scope="row">Brand</th>
                 <td>{{ $product->brand->name }}</td>
             </tr>
             <tr>
-                <th>Condition</th>
+                <th scope="row">Condition</th>
                 <td>{{ $product->condition->name }}</td>
             </tr>
             <tr>
-                <th>Price</th>
+                <th scope="row">Price</th>
                 <td>{{ $product->price }} kr</td>
             </tr>
             <tr>
-                <th>Description</th>
+                <th scope="row">Description</th>
                 <td>{{ $product->description }}</td>
             </tr>
         </table>
