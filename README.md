@@ -32,7 +32,7 @@ Products can be filtered by **brand** and **condition**, and the filters can be 
 
 ## Pagination
 
-15 products per page.
+10 products per page on dashboard and 15 per page on products page.
 
 ## Factories & Seeders
 
@@ -74,11 +74,13 @@ Custom pages for 404 and 500 errors, both with a link back to the previous page.
 3. `composer install`
 4. `npm install`
 5. `cp .env.example .env`
-6. `php artisan key:generate`
-7. `php artisan migrate`
-8. `php artisan db:seed`
-9. `php artisan serve`
-10. `npm run dev`
+6. In .env, set `DB_CONNECTION=mysql`, `DB_DATABASE=retrotech`, and update `DB_USERNAME` and `DB_PASSWORD` to match your local MySQL setup
+7. Create a MySQL database named `retrotech`
+8. `php artisan key:generate`
+9. `php artisan migrate`
+10. `php artisan db:seed`
+11. `php artisan serve`
+12. `npm run dev`
 
 Open in browser: http://localhost:8000
 
