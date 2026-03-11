@@ -11,6 +11,11 @@
     vertical-align: top;
 }
 
+.detail-table td {
+    word-break: break-word;
+    overflow-wrap: break-word;
+}
+
 .detail-table th {
     width: 30%;
     color: #888;

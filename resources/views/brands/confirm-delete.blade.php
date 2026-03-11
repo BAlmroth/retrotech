@@ -5,7 +5,7 @@
         <h1>Delete brand</h1>
         <p>Are you sure that you want to delete: <strong>{{ $brand->name }}</strong>?</p>
         @if($brand->products_count > 0)
-            <p class="field-error">Warning: this brand has {{ $brand->products_count }} product(s) assigned to it.</p>
+            <p class="field-error">Warning, can not delete: this brand has {{ $brand->products_count }} product(s) assigned to it.</p>
         @endif
 
         <form action="{{ route('brands.destroy', $brand->id) }}" method="POST">

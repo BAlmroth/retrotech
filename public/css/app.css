@@ -1,13 +1,22 @@
 /* Root*/
 :root {
-    --color-bg: #1e1e1e;
-    --color-header: #151515;
-    --color-accent: #d32f2f;
-    --color-accent-hover: #b71c1c;
-    --color-text: #f8f8f2;
-    --color-border: #333;
-    --color-error: #ff0000;
-    --color-success: #a7c075;
+
+    --color-bg: #131313;
+    --color-header: #1e1e1e;
+    --color-card: #2a2a2a;
+
+--color-accent: #e05555;
+    --color-accent-hover: #c43f3f;
+    --color-button-text: #ffffff;
+    --color-link: #4cc9ff;
+    --color-link-hover: #3399cc;
+
+
+    --color-text: #f0f0f0;
+    --color-border: #555555;
+
+    --color-error: #ff6e6e;
+    --color-success: #6eff6e;
 
     --font-main: "IBM Plex Sans", sans-serif;
 }
@@ -90,7 +99,7 @@ input:focus, select:focus, textarea:focus, button:focus, a:focus {
 /* Main button */
 .button-main {
     background: var(--color-accent);
-    color: white;
+    color: var(--color-button-text);
     padding: 0.7rem 1.2rem;
     border: none;
     border-radius: 6px;
