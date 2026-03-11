@@ -1,34 +1,34 @@
 <div class="products-index">
 
     <div class="index-header">
-        <h2>Products</h2>
-        <form method="GET" action="{{ route('products.create') }}">
-            <button class="button-main" type="submit">+ Add Product</button>
-        </form>
-    </div>
+<h2>Products</h2>
+<form method="GET" action="{{ route('products.create') }}">
+    <button class="button-main" type="submit">+ Add Product</button>
+</form>
+</div>
 
 <form class="filter-bar" method="GET" action="{{ $filterRoute }}" aria-label="Filter products">
-
+    
     <label for="brand_id" class="sr-only">Brand</label>
     <select name="brand_id" id="brand_id">
         <option value="">All Brands</option>
         @foreach ($brands as $brand)
-            <option value="{{ $brand->id }}" {{ request('brand_id') == $brand->id ? 'selected' : '' }}>
-                {{ $brand->name }}
-            </option>
+        <option value="{{ $brand->id }}" {{ request('brand_id') == $brand->id ? 'selected' : '' }}>
+            {{ $brand->name }}
+        </option>
         @endforeach
     </select>
-
+    
     <label for="condition_id" class="sr-only">Condition</label>
     <select name="condition_id" id="condition_id">
         <option value="">All Conditions</option>
         @foreach ($conditions as $condition)
-            <option value="{{ $condition->id }}" {{ request('condition_id') == $condition->id ? 'selected' : '' }}>
-                {{ $condition->name }}
-            </option>
+        <option value="{{ $condition->id }}" {{ request('condition_id') == $condition->id ? 'selected' : '' }}>
+            {{ $condition->name }}
+        </option>
         @endforeach
     </select>
-
+    
     <label for="sort" class="sr-only">Sort by</label>
     <select name="sort" id="sort">
         <option value="newest" {{ request('sort') == 'newest' ? 'selected' : '' }}>Newest</option>
@@ -36,13 +36,14 @@
         <option value="price_high" {{ request('sort') == 'price_high' ? 'selected' : '' }}>Price: High to Low</option>
         <option value="price_low" {{ request('sort') == 'price_low' ? 'selected' : '' }}>Price: Low to High</option>
     </select>
-
+    
     <button class="button-main" type="submit">Filter</button>
     <a class="button-clear" href="{{ $filterRoute }}">Clear</a>
 </form>
+<p class="productsCount">Showing ({{ $products->total() }}) products</p>
 
-    <table class="products-table">
-        <caption class="sr-only">Product list</caption>
+<table class="products-table">
+    <caption class="sr-only">Product list</caption>
         <thead>
             <tr>
                 <th scope="col">#id</th>

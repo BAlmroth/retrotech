@@ -98,6 +98,11 @@
 nav[aria-label="Pagination Navigation"] {
     text-align: center;
 }
+.productsCount {
+    text-align: start;
+    margin: 0.5rem;
+    font-size: 0.8rem;
+}
 
 @media (min-width: 768px) {
     .products-index {
