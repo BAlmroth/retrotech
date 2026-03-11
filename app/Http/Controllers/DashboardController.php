@@ -34,14 +34,4 @@ class DashboardController extends Controller
 
         return view('dashboard', compact('products', 'user', 'brands', 'conditions'));
     }
-
-
-    // public function __invoke(Request $request)
-    // {
-    //     $user = Auth::user();
-
-    //     return view('dashboard', [
-    //         'user' => $user
-    //     ]);
-    // }
 }
