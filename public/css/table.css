@@ -90,7 +90,6 @@
     text-align: center;
     padding: 2rem;
     color: #999;
-    display: block;
 }
 
 .products-table tbody tr[data-href] {
