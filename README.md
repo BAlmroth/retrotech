@@ -79,7 +79,6 @@ Custom pages for 404 and 500 errors, both with a link back to the previous page.
 8. `php artisan migrate`
 9. `php artisan db:seed`
 10. `php artisan serve`
-11. `npm run dev`
 
 Open in browser: http://localhost:8000
 
