@@ -1,59 +1,88 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# RetroTech – Laravel Admin Tool
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+RetroTech is a Laravel-based admin system for managing retro gaming consoles.
 
-## About Laravel
+The application simulates a simple webshop admin panel where products can be created, edited, filtered and deleted.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+This project was built as part of a Laravel course assignment to practice building a CRUD application using a framework.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+**Category:** Electronics 
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## Features
 
-## Learning Laravel
+- Login / logout with authentication
+- Dashboard with greeting and product overview
+- Full CRUD for products
+- Filter by brand and condition
+- Sort by price and time of creation
+- Pagination with filters preserved
+- Confirm delete page to prevent accidental deletion
+- Accessible alerts
+- Custom error pages (404 and 500)
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework. You can also check out [Laravel Learn](https://laravel.com/learn), where you will be guided through building a modern Laravel application.
+## Login
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+**Email:** admin@retrotech.se
 
-## Laravel Sponsors
+**Password:** 123
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+## Filters
 
-### Premium Partners
+Products can be filtered by **brand** and **condition**, and the filters can be combined.
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+## Pagination
 
-## Contributing
+10 products per page on dashboard and 15 per page on products page.
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+## Factories & Seeders
 
-## Code of Conduct
+The project uses factories and seeders so the application looks the same on every machine.
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+**Brands:** Nintendo, Sony, Microsoft, Sega, Atari
 
-## Security Vulnerabilities
+**Conditions:** New, Like New, Good, Acceptable, For Parts
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+**Products** are generated with `ProductFactory` using realistic retro console names such as Nintendo Switch, PlayStation 3, Sega Dreamcast and Xbox 360.
 
-## License
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+## Accessibility (A11Y)
+
+- Semantic HTML elements throughout
+- All form inputs have associated labels
+- Validation errors are clearly displayed
+- Alerts use `role="alert"` and `aria-live` for screen reader support
+- Color contrast meets readability standards
+- Layout works correctly when zooming in and out
+
+
+## Error Pages
+
+Custom pages for 404 and 500 errors, both with a link back to the previous page.
+
+
+## Tech Stack
+
+- PHP 8.2 / Laravel 12
+- Blade templates
+- CSS / JavaScript
+
+
+## Installation
+
+1. `git clone https://github.com/BAlmroth/retrotech`
+2. `cd retrotech`
+3. `composer install`
+4. `npm install`
+5. `cp .env.example .env`
+6. Create a MySQL database named retrotech by running: `mysql -u root -p` and `CREATE DATABASE retrotech;` and then `exit`
+7. `php artisan key:generate`
+8. `php artisan migrate`
+9. `php artisan db:seed`
+10. `php artisan serve`
+11. `npm run dev`
+
+Open in browser: http://localhost:8000
+
+## Authors
+
+Benita Almroth & Wilma Reistad
