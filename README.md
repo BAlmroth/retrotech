@@ -74,13 +74,12 @@ Custom pages for 404 and 500 errors, both with a link back to the previous page.
 3. `composer install`
 4. `npm install`
 5. `cp .env.example .env`
-6. In .env, set `DB_CONNECTION=mysql`, `DB_DATABASE=retrotech`, and update `DB_USERNAME` and `DB_PASSWORD` to match your local MySQL setup
-7. Create a MySQL database named `retrotech`
-8. `php artisan key:generate`
-9. `php artisan migrate`
-10. `php artisan db:seed`
-11. `php artisan serve`
-12. `npm run dev`
+6. Create a MySQL database named `retrotech`
+7. `php artisan key:generate`
+8. `php artisan migrate`
+9. `php artisan db:seed`
+10. `php artisan serve`
+11. `npm run dev`
 
 Open in browser: http://localhost:8000
 
