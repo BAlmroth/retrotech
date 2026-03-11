@@ -65,10 +65,20 @@
 <td data-label="Price">{{ $product->price }} kr</td>
 <td data-label="Added">{{ $product->created_at->format('d M Y') }}</td>
 <td data-label="Description" class="desc">{{ Str::limit($product->description, 60) }}</td>
+
 <td data-label="Actions" class="actions">
-    <a href="{{ route('products.show', $product->id) }}" aria-label="View {{ $product->name }}">View</a>
-    <a href="{{ route('products.edit', $product->id) }}" aria-label="Edit {{ $product->name }}">Edit</a>
-    <a href="{{ route('products.confirmDelete', $product->id) }}" class="danger" aria-label="Delete {{ $product->name }}">Delete</a>
+    <a href="{{ route('products.show', $product->id) }}" aria-label="View {{ $product->name }}">
+        <i class="fa-solid fa-eye"></i>
+        View
+    </a>
+    <a href="{{ route('products.edit', $product->id) }}" aria-label="Edit {{ $product->name }}">
+        <i class="fa-solid fa-pen"></i>
+        Edit
+    </a>
+    <a href="{{ route('products.confirmDelete', $product->id) }}" class="danger" aria-label="Delete {{ $product->name }}">
+        <i class="fa-solid fa-trash"></i>
+        Delete
+    </a>
 </td>
             </tr>
             @empty
