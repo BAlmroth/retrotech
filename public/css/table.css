@@ -95,6 +95,9 @@
 .products-table tbody tr[data-href] {
     cursor: pointer;
 }
+nav[aria-label="Pagination Navigation"] {
+    text-align: center;
+}
 
 @media (min-width: 768px) {
     .products-index {
