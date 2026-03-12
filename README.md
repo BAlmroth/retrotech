@@ -75,13 +75,14 @@ Custom pages for 404 and 500 errors, both with a link back to the previous page.
 3. `composer install`
 4. `npm install`
 5. `cp .env.example .env`
-6. Create a MySQL database named retrotech by running: `mysql -u root -p` and `CREATE DATABASE retrotech;` and then `exit`
+6. Create a MySQL database named retrotech by running: `mysql -u root -p` (write your password for mySQL if you have one otherwise press enter)and `CREATE DATABASE retrotech;` and then `exit`
 7. `php artisan key:generate`
 8. `php artisan migrate`
 9. `php artisan db:seed`
 10. `php artisan serve`
 
-Open in browser: http://localhost:8000
+Open in browser: http://localhost:8000 (or http://localhost:8001 if 8000 is occupied)
+Login mail: `admin@retrotech.se` password: `123`
 
 ## Authors
 
