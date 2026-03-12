@@ -196,6 +196,10 @@ input:focus, select:focus, textarea:focus, button:focus, a:focus {
     transition: 0.2s ease;
 }
 
+.brand-card {
+    min-width: 650px;
+}
+
 
 @media (min-width: 768px) {
     .button-danger:hover {

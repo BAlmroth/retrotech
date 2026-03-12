@@ -1,7 +1,7 @@
 @extends('layouts.app')
 @section('content')
 <main class="page-card-wrapper">
-    <div class="page-card">
+    <div class="page-card brand-card">
 
         <h1>{{ $brand->name }}</h1>
         <p>{{ $products->total() }} products</p>
