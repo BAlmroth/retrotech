@@ -16,7 +16,6 @@ class ProductsTableSeeder extends Seeder
         $microsoft = Brand::where('name', 'Microsoft')->first();
         $atari = Brand::where('name', 'Atari')->first();
         $sega = Brand::where('name', 'Sega')->first();
-        $ubisoft = Brand::where('name', 'Ubisoft')->first();
 
         $new = Condition::where('name', 'New')->first();
         $likeNew = Condition::where('name', 'Like New')->first();
@@ -26,15 +25,12 @@ class ProductsTableSeeder extends Seeder
 
         Product::create([
             'name' => 'Nintendo Switch',
-            'description' => 'Good',
-            'brand_id' => $nintendo->id,
-            'condition_id' => $good->id,
-            'price' => '400'
+            'description' => 'Good condition, scratches by ports and on top. fully functiona'
         ]);
 
         Product::create([
             'name' => 'PlayStation 4',
-            'description' => 'Good',
+            'description' => 'dark/burned spots on top from unrelated accident but fully functional.',
             'brand_id' => $sony->id,
             'condition_id' => $likeNew->id,
             'price' => '500'

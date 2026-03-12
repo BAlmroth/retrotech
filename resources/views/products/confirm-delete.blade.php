@@ -11,7 +11,7 @@
             @csrf
             @method('DELETE')
             <button class="button-main" type="submit">Yes, delete</button>
-            <button type="button" onclick="window.location='{{ route('products.index') }}'">Cancel</button>
+            <a href="{{ url()->previous() }}" aria-label="Back to previous page">Back</a>
         </form>
     </div>
 </main>

@@ -31,17 +31,11 @@ class DashboardController extends Controller
         $user = Auth::user();
         $brands = Brand::all();
         $conditions = Condition::all();
+        $totalProducts = Product::count();
+        $totalBrands = Brand::count();
+        $latestProduct = Product::latest()->first();
+        $oldestProduct = Product::oldest()->first();
 
-        return view('dashboard', compact('products', 'user', 'brands', 'conditions'));
+        return view('dashboard', compact('products', 'user', 'brands', 'conditions', 'totalProducts', 'totalBrands', 'latestProduct', 'oldestProduct'));
     }
-
-
-    // public function __invoke(Request $request)
-    // {
-    //     $user = Auth::user();
-
-    //     return view('dashboard', [
-    //         'user' => $user
-    //     ]);
-    // }
 }

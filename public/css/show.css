@@ -11,6 +11,11 @@
     vertical-align: top;
 }
 
+.detail-table td {
+    word-break: break-word;
+    overflow-wrap: break-word;
+}
+
 .detail-table th {
     width: 30%;
     color: #888;
@@ -23,22 +28,4 @@
     align-items: center;
     gap: 1rem;
     margin-top: 1.5rem;
-}
-
-.button-danger {
-    background: transparent;
-    color: var(--color-error);
-    padding: 0.7rem 1.2rem;
-    border: 1px solid var(--color-error);
-    border-radius: 6px;
-    font-weight: 600;
-    text-decoration: none;
-    transition: 0.2s ease;
-}
-
-@media (min-width: 768px) {
-    .button-danger:hover {
-        background: var(--color-error);
-        color: white;
-    }
 }

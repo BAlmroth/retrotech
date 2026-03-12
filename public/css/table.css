@@ -46,6 +46,10 @@
     background: var(--color-header);
 }
 
+.products-table tbody tr:nth-child(even) {
+    background: rgba(255,255,255,0.02);
+}
+
 .products-table td {
     display: flex;
     justify-content: space-between;
@@ -95,10 +99,19 @@
 .products-table tbody tr[data-href] {
     cursor: pointer;
 }
+nav[aria-label="Pagination Navigation"] {
+    text-align: center;
+}
+.productsCount {
+    text-align: start;
+    margin: 0.5rem;
+    font-size: 0.8rem;
+}
 
 @media (min-width: 768px) {
     .products-index {
-        margin: 2rem;
+    margin: 1rem;
+    padding: 1rem;
     }
 
     .products-table thead {
@@ -157,11 +170,16 @@
         width: 18%;
     }
 
+    .products-table th:nth-child(7) {
+        width: 25%;
+    }
+
     .products-table tbody tr:hover {
         background: var(--color-header);
     }
 
     .products-table .actions {
         justify-content: flex-start;
+        gap: 0.5rem;
     }
 }
