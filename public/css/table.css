@@ -170,6 +170,10 @@ nav[aria-label="Pagination Navigation"] {
         width: 18%;
     }
 
+    .products-table th:nth-child(7) {
+        width: 25%;
+    }
+
     .products-table tbody tr:hover {
         background: var(--color-header);
     }

@@ -16,7 +16,6 @@ class ProductsTableSeeder extends Seeder
         $microsoft = Brand::where('name', 'Microsoft')->first();
         $atari = Brand::where('name', 'Atari')->first();
         $sega = Brand::where('name', 'Sega')->first();
-        $ubisoft = Brand::where('name', 'Ubisoft')->first();
 
         $new = Condition::where('name', 'New')->first();
         $likeNew = Condition::where('name', 'Like New')->first();

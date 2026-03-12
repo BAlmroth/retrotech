@@ -18,8 +18,7 @@ class BrandsTableSeeder extends Seeder
             'Nintendo',
             'Microsoft',
             'Atari',
-            'Sega',
-            'Ubisoft'
+            'Sega'
         ];
 
         foreach($brands as $brand){
