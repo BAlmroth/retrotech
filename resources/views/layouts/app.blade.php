@@ -23,6 +23,7 @@
             <div class="nav-right">
                 <a href="{{ route('dashboard')}}">Dashboard</a>
                 <a href="{{ route('products.index') }}">Products</a>
+                <a href="{{ route('brands.index') }}">Brands</a>
 
                 <form action="{{ route('logout') }}" method="POST">
                     @csrf

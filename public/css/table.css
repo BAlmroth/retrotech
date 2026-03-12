@@ -46,6 +46,10 @@
     background: var(--color-header);
 }
 
+.products-table tbody tr:nth-child(even) {
+    background: rgba(255,255,255,0.02);
+}
+
 .products-table td {
     display: flex;
     justify-content: space-between;
@@ -106,7 +110,8 @@ nav[aria-label="Pagination Navigation"] {
 
 @media (min-width: 768px) {
     .products-index {
-        margin: 2rem;
+    margin: 1rem;
+    padding: 1rem;
     }
 
     .products-table thead {
@@ -171,6 +176,6 @@ nav[aria-label="Pagination Navigation"] {
 
     .products-table .actions {
         justify-content: flex-start;
-        gap: 1rem;
+        gap: 0.5rem;
     }
 }
