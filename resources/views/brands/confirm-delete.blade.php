@@ -12,7 +12,7 @@
             @csrf
             @method('DELETE')
             <button class="button-main" type="submit" {{ $brand->products_count > 0 ? 'disabled' : '' }}>Yes, delete</button>
-            <a href="{{ route('brands.index') }}" aria-label="Back to Brands">Back</a>
+            <a href="{{ route('dashboard')}}">Back to Dashboard</a>
         </form>
     </div>
 </main>
