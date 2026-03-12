@@ -69,16 +69,16 @@
 
 <td data-label="Actions" class="actions">
     <a href="{{ route('products.show', $product->id) }}" aria-label="View {{ $product->name }}">
-        <i class="fa-solid fa-eye"></i>
         View
+        <i class="fa-solid fa-eye"></i>
     </a>
     <a href="{{ route('products.edit', $product->id) }}" aria-label="Edit {{ $product->name }}">
-        <i class="fa-solid fa-pen"></i>
         Edit
+        <i class="fa-solid fa-pen"></i>
     </a>
     <a href="{{ route('products.confirmDelete', $product->id) }}" class="danger" aria-label="Delete {{ $product->name }}">
-        <i class="fa-solid fa-trash"></i>
         Delete
+        <i class="fa-solid fa-trash"></i>
     </a>
 </td>
             </tr>

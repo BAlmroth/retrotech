@@ -32,16 +32,6 @@ class ProductController extends Controller
         return view('products.index', compact('products', 'brands', 'conditions'));
     }
 
-    // Show products per brand
-    public function brand(Brand $brand)
-    {
-        $products = $brand->products()
-            ->with('condition')
-            ->orderBy('created_at', 'desc')
-            ->paginate(10);
-
-        return view('products.index', compact('products', 'brand'));
-    }
 
 
      //Show the form for creating a new resource.
