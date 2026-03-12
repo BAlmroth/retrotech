@@ -1,7 +1,14 @@
 @extends('layouts.app')
 @section('content')
 <div class="admin-layout">
-
+    <div class="admin-main">
+        <section class="greeting">
+            <p>Hello, {{ $user->name }}!</p>
+            <h2>Dashboard</h2>
+        </section>
+        @include('products._table', ['filterRoute' => route('dashboard')])
+    </div>
+    
     <aside class="sidebar" aria-label="Statistics">
         <p class="sidebar-title">Stats</p>
 
@@ -36,14 +43,5 @@
             <small>{{ $oldestProduct?->created_at->format('d M Y') ?? '' }}</small> 
         </div>
     </aside>
-
-    <div class="admin-main">
-        <section class="greeting">
-            <p>Hello, {{ $user->name }}!</p>
-            <h2>Dashboard</h2>
-        </section>
-        @include('products._table', ['filterRoute' => route('dashboard')])
-    </div>
-
 </div>
 @endsection
