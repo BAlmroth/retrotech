@@ -75,9 +75,8 @@ Custom pages for 404 and 500 errors, both with a link back to the previous page.
 3. `composer install`
 4. `npm install`
 5. `cp .env.example .env`
-6. Create the MySQL database
+6. Create the MySQL database. Open your terminal and start MySQL:
 
-Open your terminal and start MySQL:
 `mysql -u root -p`
 Press Enter, then type your MySQL password.
 If you do not have a password, just press Enter.
@@ -87,6 +86,7 @@ When you are inside MySQL, create the database:
 
 Then exit MySQL:
 `exit`
+
 7. `php artisan key:generate`
 8. `php artisan migrate`
 9. `php artisan db:seed`
