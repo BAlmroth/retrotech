@@ -108,7 +108,7 @@
 
 <div class="product-actions">
     <a href="{{ route('products.confirmDelete', $product->id) }}" class="button-danger">Delete</a>
-    <a href="{{ url()->previous() }}">Back</a>
+    <a href="{{ url()->previous() }}" aria-label="Back to previous page">Back</a>
 </div>
 
 </div>

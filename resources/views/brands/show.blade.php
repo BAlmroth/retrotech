@@ -49,7 +49,7 @@
         <div class="product-actions">
             <a href="{{ route('brands.edit', $brand->id) }}" class="button-main">Edit Brand</a>
             <a href="{{ route('brands.confirmDelete', $brand->id) }}" class="button-danger">Delete Brand</a>
-            <a href="{{ route('brands.index') }}">Back</a>
+            <a href="{{ route('brands.index') }}" aria-label="Back to brands">Back</a>
         </div>
 
     </div>

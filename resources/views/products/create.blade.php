@@ -93,7 +93,7 @@
             <button class="button-main" type="submit">Create Product</button>
         </form>
 
-        <a href="{{ url()->previous() }}">Back</a>
+        <a href="{{ url()->previous() }}" aria-label="Back to previous page">Back</a>
     </div>
 </main>
 @endsection
