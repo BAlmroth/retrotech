@@ -45,11 +45,12 @@
         </table>
 
         {{ $products->links() }}
-
+        
         <div class="product-actions">
             <a href="{{ route('brands.edit', $brand->id) }}" class="button-main">Edit Brand</a>
+            <a href="{{ route('products.create') }}" class="button-main">+ Add Product</a>
             <a href="{{ route('brands.confirmDelete', $brand->id) }}" class="button-danger">Delete Brand</a>
-            <a href="{{ route('brands.index') }}" aria-label="Back to brands">Back</a>
+            <a href="{{ route('brands.index') }}" aria-label="Back to brands overview">Back</a>
         </div>
 
     </div>
