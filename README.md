@@ -79,16 +79,12 @@ Custom pages for 404 and 500 errors, both with a link back to the previous page.
 > Press Enter, then type your MySQL password.
 > If you do not have a password, just press Enter.
 
-When you are inside MySQL, create the database:
-`CREATE DATABASE retrotech;`
-
-Then exit MySQL:
-`exit`
-
-7. `php artisan key:generate`
-8. `php artisan migrate`
-9. `php artisan db:seed`
-10. `php artisan serve`
+7. When you are inside MySQL, create the database: `CREATE DATABASE retrotech;`
+8. Then exit MySQL: `exit`
+9. `php artisan key:generate`
+10. `php artisan migrate`
+11. `php artisan db:seed`
+12. `php artisan serve`
 
 Open in browser: http://localhost:8000 (or http://localhost:8001 if 8000 is occupied)
 
