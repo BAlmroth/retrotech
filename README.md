@@ -2,7 +2,7 @@
 
 RetroTech is a Laravel-based admin system for managing retro gaming consoles.
 
-The application simulates a simple webshop admin panel where products can be created, edited, filtered and deleted.
+The application simulates a simple webshop admin panel where products and brands can be created, edited, filtered and deleted.
 
 This project was built as part of a Laravel course assignment to practice building a CRUD application using a framework.
 
@@ -13,6 +13,7 @@ This project was built as part of a Laravel course assignment to practice buildi
 - Login / logout with authentication
 - Dashboard with greeting and product overview
 - Full CRUD for products
+- Full CRUD for brands
 - Filter by brand and condition
 - Sort by price and time of creation
 - Pagination with filters preserved
