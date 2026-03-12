@@ -22,6 +22,8 @@ class BrandController extends Controller
     {
         $validated = $request->validate([
             'name' => 'required|string|max:255|unique:brands,name',
+        ], [
+            'name.unique' => 'Could not create brand, a brand with this name already exists.',
         ]);
 
         try {
@@ -47,6 +49,8 @@ class BrandController extends Controller
     {
         $validated = $request->validate([
             'name' => 'required|string|max:255|unique:brands,name,' . $brand->id,
+        ], [
+            'name.unique' => 'Could not update brand, a brand with this name already exists.',
         ]);
 
         try {
