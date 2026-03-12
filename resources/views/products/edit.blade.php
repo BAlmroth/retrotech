@@ -102,12 +102,14 @@
 @enderror
 </div>
 
-<button class="button-main" type="submit">Update</button>
+<button class="button-main edit-button" type="submit">Update</button>
 
 </form>
 
-<a href="{{ route('products.confirmDelete', $product->id) }}">Delete</a>
-<a href="{{ url()->previous() }}">Back</a>
+<div class="product-actions">
+    <a href="{{ route('products.confirmDelete', $product->id) }}" class="button-danger">Delete</a>
+    <a href="{{ url()->previous() }}">Back</a>
+</div>
 
 </div>
 </main>

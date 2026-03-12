@@ -185,7 +185,24 @@ input:focus, select:focus, textarea:focus, button:focus, a:focus {
 
 }
 
+.button-danger {
+    background: transparent;
+    color: var(--color-error);
+    padding: 0.7rem 1.2rem;
+    border: 1px solid var(--color-error);
+    border-radius: 6px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: 0.2s ease;
+}
+
+
 @media (min-width: 768px) {
+    .button-danger:hover {
+        background: var(--color-error);
+        color: white;
+    }
+
     .button-main:hover {
         background: var(--color-accent-hover);
     }
