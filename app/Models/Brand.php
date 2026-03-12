@@ -12,4 +12,9 @@ class Brand extends Model
     {
         return $this->hasMany(Product::class);
     }
+
+    public function setNameAttribute($value)
+    {
+        $this->attributes['name'] = strtolower($value);
+    }
 }

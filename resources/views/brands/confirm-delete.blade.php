@@ -11,8 +11,8 @@
         <form action="{{ route('brands.destroy', $brand->id) }}" method="POST">
             @csrf
             @method('DELETE')
-            <button class="button-main" type="submit">Yes, delete</button>
-            <button type="button" onclick="window.location='{{ route('brands.index') }}'">Cancel</button>
+            <button class="button-main" type="submit" {{ $brand->products_count > 0 ? 'disabled' : '' }}>Yes, delete</button>
+            <a href="{{ route('brands.index') }}" aria-label="Back to Brands">Back</a>
         </form>
     </div>
 </main>
