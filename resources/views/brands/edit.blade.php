@@ -24,9 +24,10 @@
 
             <button class="button-main" type="submit">Update</button>
         </form>
-
-        <a href="{{ route('brands.confirmDelete', $brand->id) }}">Delete</a>
+    <div class="product-actions">
+        <a class="button-danger" href="{{ route('brands.confirmDelete', $brand->id) }}">Delete</a>
         <a href="{{ url()->previous() }}">Back</a>
+    </div>
     </div>
 </main>
 @endsection

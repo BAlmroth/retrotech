@@ -16,3 +16,8 @@
 .delete-container button {
     font-size: 1.2rem;
 }
+
+.button-main:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
