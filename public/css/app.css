@@ -216,6 +216,10 @@ input:focus, select:focus, textarea:focus, button:focus, a:focus {
     a:hover {
         text-decoration: underline;
     }
+
+    .errorPage {
+        text-align: center;
+    }
 }
 
 @media (min-width: 500px) {
