@@ -4,7 +4,7 @@
 
 .greeting p {
     font-size: 1.2rem;
-    color: #999;
+    color: var(--color-light);
 }
 
 .greeting h2 {
@@ -23,7 +23,7 @@
     width: 200px;
     flex-shrink: 0;
     background: var(--color-header);
-    border-right: 1px solid var(--color-border);
+    border-right: 1px solid var(--color-secondary);
     flex-direction: column;
     gap: 1px;
     padding: 1.5rem 0;
@@ -33,7 +33,7 @@
     font-size: 1rem;
     text-transform: uppercase;
     letter-spacing: 0.12em;
-    color: #999;
+    color: var(--color-light);
     padding: 0 1.5rem 1rem;
     border-bottom: 2px solid var(--color-accent);
     margin-bottom: 0;
@@ -44,14 +44,14 @@
     flex-direction: column;
     gap: 0.25rem;
     padding: 1.25rem 1.5rem;
-    border-bottom: 1px solid var(--color-border);
+    border-bottom: 1px solid var(--color-secondary);
 }
 
 .stat-card span {
     font-size: 0.75rem;
     text-transform: uppercase;
     letter-spacing: 0.08em;
-    color: #999;
+    color: var(--color-light);
 }
 
 .stat-card strong {
@@ -83,7 +83,7 @@
 
 .stat-card small {
     font-size: 0.75rem;
-    color: #999;
+    color: var(--color-light);
 }
 
 .admin-main {

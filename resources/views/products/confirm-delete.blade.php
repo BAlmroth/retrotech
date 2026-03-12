@@ -10,7 +10,7 @@
         <form action="{{ route('products.destroy', $product->id) }}" method="POST">
             @csrf
             @method('DELETE')
-            <button class="button-main" type="submit">Yes, delete</button>
+            <button class="button-danger" type="submit">Yes, delete</button>
             <a href="{{ route('dashboard')}}">Back to Dashboard</a>
         </form>
     </div>

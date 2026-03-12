@@ -39,7 +39,7 @@
 
 .products-table tbody tr {
     display: block;
-    border: 1px solid var(--color-border);
+    border: 1px solid var(--color-secondary);
     border-radius: 6px;
     margin-bottom: 1rem;
     padding: 0.75rem 1rem;
@@ -56,7 +56,7 @@
     align-items: flex-start;
     gap: 1rem;
     padding: 0.35rem 0;
-    border-bottom: 1px solid var(--color-border);
+    border-bottom: 1px solid var(--color-secondary);
     color: var(--color-text);
     font-size: 0.9rem;
     word-break: break-word;
@@ -75,7 +75,7 @@
 }
 
 .products-table .desc {
-    color: #999;
+    color: var(--color-light);
     font-size: 0.88rem;
 }
 
@@ -93,14 +93,16 @@
 .products-table .empty {
     text-align: center;
     padding: 2rem;
-    color: #999;
+    color: var(--color-light);
 }
 
 .products-table tbody tr[data-href] {
     cursor: pointer;
 }
 nav[aria-label="Pagination Navigation"] {
+    display: block;
     text-align: center;
+    margin: 1rem;
 }
 .productsCount {
     text-align: start;
@@ -136,7 +138,7 @@ nav[aria-label="Pagination Navigation"] {
     .products-table td {
         display: table-cell;
         padding: 0.65rem 1rem;
-        border-bottom: 1px solid var(--color-border);
+        border-bottom: 1px solid var(--color-secondary);
         border-top: none;
         vertical-align: middle;
         word-break: break-word;
@@ -151,7 +153,7 @@ nav[aria-label="Pagination Navigation"] {
         text-align: left;
         padding: 0.65rem 1rem;
         background: var(--color-header);
-        border-bottom: 2px solid var(--color-border);
+        border-bottom: 2px solid var(--color-secondary);
         font-weight: 600;
         color: var(--color-text);
     }

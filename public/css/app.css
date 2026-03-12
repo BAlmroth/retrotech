@@ -1,20 +1,18 @@
 /* Root*/
 :root {
 
-    --color-bg: #131313;
-    --color-header: #1e1e1e;
-    --color-card: #2a2a2a;
+    --color-bg: #1c1e24;
+    --color-header: #252830;
+    --color-card: #2e3138;
+    --color-accent: #7eb8d4;
+    --color-accent-hover: #5a9ab8;
+    --color-button-text: #0f1318;
+    --color-text: #cdd6e0;
+    --color-secondary: #454a54;
+    --color-error: #ffa0a0;
+    --color-success: #70c98a;
+    --color-light: #999;
 
-    --color-accent: #e05555;
-    --color-accent-hover: #c43f3f;
-    --color-button-text: #ffffff;
-
-
-    --color-text: #f0f0f0;
-    --color-border: #555555;
-
-    --color-error: #ff6e6e;
-    --color-success: #6eff6e;
 
     --font-main: "IBM Plex Sans", sans-serif;
 }
@@ -72,9 +70,9 @@ input,
 select,
 textarea {
     padding: 0.5rem;
-    border: 1px solid var(--color-border);
+    border: 1px solid var(--color-secondary);
     border-radius: 10px;
-    background-color: var(--color-border);
+    background-color: var(--color-secondary);
     color: var(--color-text);
     width: 100%;
 }
@@ -148,7 +146,7 @@ input:focus, select:focus, textarea:focus, button:focus, a:focus {
     padding: 2rem;
     background: var(--color-header);
     border-radius: 12px;
-    border: 1px solid var(--color-border);
+    border: 1px solid var(--color-secondary);
 }
 
 .page-card-wrapper--centered {
@@ -170,16 +168,16 @@ input:focus, select:focus, textarea:focus, button:focus, a:focus {
 }
 
 .footer-copy {
-  font-size: 0.8rem;
-  opacity: 0.4;
+  font-size: 0.9rem;
   margin: 0;
 }
 
 .site-footer {
   background-color: var(--color-header);
-  border-top: 1px solid var(--color-border);
+  border-top: 1px solid var(--color-secondary);
   padding: 1rem 2rem;
   text-align: center;
+  color: var(--color-light);
 
 }
 
