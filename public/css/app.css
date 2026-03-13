@@ -200,7 +200,7 @@ input:focus, select:focus, textarea:focus, button:focus, a:focus {
 @media (min-width: 768px) {
     .button-danger:hover {
         background: var(--color-error);
-        color: white;
+        color: rgb(0, 0, 0);
     }
 
     .button-main:hover {
