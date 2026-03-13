@@ -52,7 +52,7 @@ class ProductController extends Controller
             'name' => 'required|string|max:255',
             'brand_id' => 'required|exists:brands,id',
             'condition_id' => 'required|exists:conditions,id',
-            'price' => 'required|numeric|min:0',
+            'price' => 'required|numeric|min:0|max:100000000',
             'description' => 'nullable|string',
         ]);
 
